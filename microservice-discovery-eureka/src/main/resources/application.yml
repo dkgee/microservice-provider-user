@@ -5,6 +5,10 @@ spring:
     active: peer2
   cloud:
     inetutils:
+      use-only-site-local-interfaces: true  #只使用本地地址
+      preferred-networks:      #指定使用的网络地址
+        - 192.168
+        - 10.0
       ignored-interfaces:
         - docker0       # 忽略docker0网卡
         - veth.*        # 忽略 veth开头的网卡
@@ -34,8 +38,11 @@ server:
   port: 8762
 eureka:
   instance:
+    ip-address: 10.16.8.210   #指定IP地址
     hostname: peer2
   client:
+    healthcheck:
+      enabled: true       #开启健康检查
     serviceUrl:
       defaultZone: http://user:pwd123@peer1:8761/eureka/
   server:
