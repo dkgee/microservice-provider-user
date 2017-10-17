@@ -11,12 +11,12 @@ import org.springframework.context.annotation.Configuration;
  * 作者: JinHuaTao
  * 时间：2017/10/17 14:23
  */
-@Configuration
+//@Configuration
 public class RibbonConfiguration {
 
-    @Bean
+   /* @Bean
     public IRule ribbonRule(){
         //负载均衡规则，改为随机
         return new RandomRule();
-    }
+    }*/
 }

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * 作者: JinHuaTao
  * 时间：2017/10/17 14:27
  */
-@Configuration
-@RibbonClient(name = "microservice-provider-user", configuration = RibbonConfiguration.class)
+/*@Configuration
+@RibbonClient(name = "microservice-provider-user", configuration = RibbonConfiguration.class)*/
 public class TestConfiguration {
 }
