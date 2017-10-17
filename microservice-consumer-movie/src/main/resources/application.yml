@@ -13,3 +13,7 @@ eureka:
 microservice-provider-user:           # 使用配置文件的方式修改该微服务的Ribbon客户端的负载均衡规则   <clientName>.ribbon.XXX
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+#microservice-provider-user:
+#  ribbon:
+#    listOfServers: localhost:8000,localhost:8001   #不使用Eureka，只使用Ribbon来实现负载均衡

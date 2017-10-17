@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8000
 spring:
   application:
     name: microservice-provider-user        # 服务名，默认虚拟主机名和服务名是一致的，可修改
