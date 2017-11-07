@@ -3,6 +3,13 @@ server:
 spring:
   application:
     name: microservice-consumer-movie
+
+#server:
+#  port: 8011
+#spring:
+#  application:
+#    name: microservice-consumer-movie-test
+
 eureka:
   client:
     serviceUrl:
