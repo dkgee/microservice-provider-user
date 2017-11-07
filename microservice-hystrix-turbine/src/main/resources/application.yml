@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: microservice-hystrix-turbine
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    passsword: guest
+
 eureka:
   client:
     serviceUrl:
@@ -11,6 +17,7 @@ eureka:
     prefer-ip-address: true
 
 
-turbine:
-  app-config: microservice-consumer-movie,microservice-consumer-movie-test
-  cluster-name-expression: "'default'"
+#turbine:
+#  app-config: microservice-consumer-movie,microservice-consumer-movie-test
+#  cluster-name-expression: "'default'"
+

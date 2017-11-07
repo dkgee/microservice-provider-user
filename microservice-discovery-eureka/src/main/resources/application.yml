@@ -2,7 +2,7 @@ spring:
   application:
     name: microservice-discovery-eureka-ha
   profiles:
-    active: peer2
+    active: peer1
   cloud:
     inetutils:
       use-only-site-local-interfaces: true  #只使用本地地址
@@ -29,6 +29,8 @@ eureka:
   instance:
     hostname: peer1                               # 指定当profile=peer1时，主机名是peer1
   client:
+    fetch-registry: false
+    register-with-eureka: false
     serviceUrl:
       defaultZone: http://user:pwd123@peer2:8762/eureka/      # 将自己注册到peer2这个Eureka上面去
 ---
